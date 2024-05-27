@@ -19,15 +19,12 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <head />
+
 <body>
     <!-- ====== Mega Menu Start -->
-    <header x-data="
-    {
-      navbarOpen: false,
-      showMegaMenu: false
-    }
-  ">
-        <div class="bg-white dark:bg-dark w-11/12 m-auto">
+    <header x-data="{navbarOpen: false,showMegaMenu: false} ">
+        <div class="bg-white dark:bg-dark  m-auto">
             <div class="container mx-auto">
                 <div class="relative -mx-4 flex items-center justify-between">
                     <div class="w-60 max-w-full px-4">
@@ -49,21 +46,21 @@
                             <nav :class="!navbarOpen && 'hidden' " id="navbarCollapse"
                                 class="absolute right-4 top-full z-10 w-full max-w-[300px] rounded-lg bg-white px-6 py-5 shadow lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none dark:bg-dark-2 lg:dark:bg-transparent">
                                 <ul class="block lg:flex">
-                                    <li class="relative" @click.outside="showMegaMenu = false">
-                                        <button @click="showMegaMenu = !showMegaMenu"
-                                            class="flex w-full items-center justify-between gap-2 py-2 text-base font-medium text-body-color hover:text-dark lg:ml-12 lg:inline-flex lg:w-auto lg:justify-center dark:text-dark-6 dark:hover:text-white">
+                                    <li class="relative" @mouseleave="showMegaMenu = false">
+                                        <button @mouseover="showMegaMenu = true"
+                                            class="flex w-full items-center justify-between gap-2 py-2 text-base font-medium text-body-color hover:text-dark lg:ml-4 xl:ml-12 lg:inline-flex lg:w-auto lg:justify-center dark:text-dark-6 dark:hover:text-white">
                                             Services
-                                            <span :class="showMegaMenu ? '-scale-y-100' : '' " class="duration-200">
+                                            <span :class="showMegaMenu ? '-scale-y-100' : ''" class="duration-200">
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M10 14.25C9.8125 14.25 9.65625 14.1875 9.5 14.0625L2.3125 7C2.03125 6.71875 2.03125 6.28125 2.3125 6C2.59375 5.71875 3.03125 5.71875 3.3125 6L10 12.5312L16.6875 5.9375C16.9688 5.65625 17.4062 5.65625 17.6875 5.9375C17.9688 6.21875 17.9688 6.65625 17.6875 6.9375L10.5 14C10.3437 14.1562 10.1875 14.25 10 14.25Z"
-                                                        fill="currentColor" />
+                                                        fill="currentColor"></path>
                                                 </svg>
                                             </span>
                                         </button>
 
-                                        <div :class=" showMegaMenu ? 'block' : 'hidden' "
+                                        <div :class="showMegaMenu ? 'block' : 'hidden'"
                                             class="w-full rounded-xl z-10 bg-white p-2 lg:absolute lg:left-0 lg:top-full lg:w-[630px] lg:p-8 lg:shadow-lg dark:bg-dark">
                                             <div class="grid gap-5 lg:grid-cols-3">
                                                 <div>
@@ -85,7 +82,7 @@
                                                         </a>
                                                         <a href="javascript:void(0)"
                                                             class="text-base font-medium text-body-color hover:text-primary dark:text-dark-6">
-                                                            Tops & Tees
+                                                            Tops &amp; Tees
                                                         </a>
                                                         <a href="javascript:void(0)"
                                                             class="text-base font-medium text-body-color hover:text-primary dark:text-dark-6">
@@ -112,7 +109,7 @@
                                                         </a>
                                                         <a href="javascript:void(0)"
                                                             class="text-base font-medium text-body-color hover:text-primary dark:text-dark-6">
-                                                            Tops & Tees
+                                                            Tops &amp; Tees
                                                         </a>
                                                         <a href="javascript:void(0)"
                                                             class="text-base font-medium text-body-color hover:text-primary dark:text-dark-6">
@@ -147,7 +144,7 @@
                                                             </div>
                                                         </div>
                                                         <img src="../images/mega-menu/image-1.jpg" alt="product image"
-                                                            class="h-full w-full object-cover object-center" />
+                                                            class="h-full w-full object-cover object-center">
                                                     </a>
                                                 </div>
                                             </div>
@@ -155,25 +152,25 @@
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)"
-                                            class="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-12 lg:inline-flex dark:text-dark-6 dark:hover:text-white">
+                                            class="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-4 xl:ml-12 lg:inline-flex dark:text-dark-6 dark:hover:text-white">
                                             Packages
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)"
-                                            class="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-12 lg:inline-flex dark:text-dark-6 dark:hover:text-white">
+                                            class="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-4 xl:ml-12 lg:inline-flex dark:text-dark-6 dark:hover:text-white">
                                             About Us
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)"
-                                            class="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-12 lg:inline-flex dark:text-dark-6 dark:hover:text-white">
+                                            class="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-4 xl:ml-12 lg:inline-flex dark:text-dark-6 dark:hover:text-white">
                                             Case Studies
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)"
-                                            class="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-12 lg:inline-flex dark:text-dark-6 dark:hover:text-white">
+                                            class="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-4 xl:ml-12 lg:inline-flex dark:text-dark-6 dark:hover:text-white">
                                             Blog
                                         </a>
                                     </li>
@@ -181,25 +178,15 @@
                             </nav>
                         </div>
                         <div class="hidden justify-end gap-3 pr-16 sm:flex lg:pr-0">
-                            <a href="javascript:void(0)"
-                                class="bg-dark bg-black dark:bg-dark-2 border-dark dark:border-dark-2 border inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5">
-                                <span class="pr-[10px]">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" class="fill-current">
-                                        <g clip-path="url(#clip0_906_8052)">
-                                            <path
-                                                d="M13.1875 9.28125H10.6875V6.8125C10.6875 6.4375 10.375 6.125 9.96875 6.125C9.59375 6.125 9.28125 6.4375 9.28125 6.84375V9.3125H6.8125C6.4375 9.3125 6.125 9.625 6.125 10.0312C6.125 10.4062 6.4375 10.7187 6.84375 10.7187H9.3125V13.1875C9.3125 13.5625 9.625 13.875 10.0312 13.875C10.4062 13.875 10.7187 13.5625 10.7187 13.1562V10.6875H13.1875C13.5625 10.6875 13.875 10.375 13.875 9.96875C13.875 9.59375 13.5625 9.28125 13.1875 9.28125Z" />
-                                            <path
-                                                d="M10 0.5625C4.78125 0.5625 0.5625 4.78125 0.5625 10C0.5625 15.2188 4.8125 19.4688 10.0312 19.4688C15.25 19.4688 19.5 15.2188 19.5 10C19.4688 4.78125 15.2188 0.5625 10 0.5625ZM10 18.0625C5.5625 18.0625 1.96875 14.4375 1.96875 10C1.96875 5.5625 5.5625 1.96875 10 1.96875C14.4375 1.96875 18.0625 5.5625 18.0625 10C18.0625 14.4375 14.4375 18.0625 10 18.0625Z" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_906_8052">
-                                                <rect width="20" height="20" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span>
-                                Request A Quote
+
+                            <a href="#"
+                                class="btn relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-indigo-100 rounded hover:bg-white group py-1.5 px-2.5">
+                                <span
+                                    class="w-56 h-48 rounded bg-black absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                                <span
+                                    class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">Request
+                                    A Quote</span>
+                                </button>
                             </a>
                         </div>
                     </div>
@@ -214,7 +201,8 @@
         <div class=" bg-center lg:pt-20  bg-cover justify-center sm:pt-20 pt-10"
             style="position: relative; background-color: #DFF1FF;">
 
-            <div class=" flex flex-col lg:flex-row  lg:items-end items-center justify-center w-11/12 m-auto h-full  container ">
+            <div
+                class=" flex flex-col lg:flex-row  lg:items-end items-center justify-center w-11/12 m-auto h-full  container ">
                 <div class="lg:w-2/4">
                     <h2 class="text-2xl font-semibold ">#Top Rated Digital Marketing Agency in India Since
                         2002</h2>
@@ -230,9 +218,8 @@
     gap: 20px;
     margin-top: 30px;
 ">
-                        <div class=" bg-[#ffffffa8]  items-center p-10" style="
+                        <div class=" bg-[#ffffffa8]  items-center px-4 sm:px-6 py-4 w-full max-w-[340px]" style="
     gap: 24px;
-    padding: 35px 25px;
     height: min-content;
     white-space: normal;
     display: flex;
@@ -245,7 +232,7 @@
                             </div>
 
                             <div>
-                                <h2>Fully Managed SEO Services
+                                <h2 class="text-[15px] sm:text-lg">Fully Managed SEO Services
                                 </h2>
                                 <p> To increase my leads</p>
                             </div>
@@ -255,10 +242,11 @@
 
 
                         </div>
-                        <div class="max-w-screen-xl bg-[#ffffffa8] flex items-center p-10" style="
+                        <div class=" bg-[#ffffffa8] px-4 sm:px-6 py-4 flex items-center p-10 w-full max-w-[340px]"
+                            style="
     column-gap: 20px;
     gap: 24px;
-    padding: 35px 60px 35px 25px;
+   
     height: min-content;
     white-space: normal;
     border-radius: 10px;
@@ -280,10 +268,11 @@
 
 
                         </div>
-                        <div class="max-w-screen-xl bg-[#ffffffa8] flex items-center p-10" style="
+                        <div class=" bg-[#ffffffa8] px-4 sm:px-6 py-4 flex items-center p-10 w-full max-w-[340px]"
+                            style="
     column-gap: 20px;
     gap: 24px;
-    padding: 35px 25px;
+   
     height: min-content;
     white-space: normal;
     border-radius: 10px;
@@ -305,13 +294,14 @@
 
 
                         </div>
-                        <div class="max-w-screen-xl bg-[#ffffffa8] flex items-center p-10" style="
+                        <div class=" px-4 sm:px-6 py-4 bg-[#ffffffa8] flex items-center p-10 w-full max-w-[340px]"
+                            style="
     column-gap: 20px;
     gap: 24px;
-    padding: 35px 25px;
+    
     height: min-content;
     white-space: normal;
-    padding: 35px 60px 35px 25px;
+  
     border-radius: 10px;
 ">
 
@@ -336,7 +326,7 @@
 
 
                 </div>
-                <div class="lg:w-2/4 text-end">
+                <div class="lg:w-2/4 lg:mt-0 mt-10 text-end">
                     <img src="https://www.pagetraffic.in/wp-content/uploads/2022/07/home-banner.png" class="ml-auto">
 
                 </div>
@@ -356,28 +346,28 @@
             <div class="max-w-screen-xl mx-auto mt-10">
                 <h2 class="text-xl font-semibold lg:text-2xl pb-8">Our Work Featured On
                 </h2>
-                <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-6">
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/entrepreneur.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/huffpost.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/semrush.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/social-media-today.png"
                             alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/Hindustan_Times.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center   lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/outlook-1.png" alt="">
                     </div>
                 </div>
@@ -392,7 +382,7 @@
                 <div class="w-full px-4">
                     <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
                         <span class="text-primary mb-2 block text-lg font-semibold">
-                            <!-- Streamline Your Business Growth with Our Best SEO Services in India -->
+
 
                         </span>
                         <h2
@@ -408,97 +398,261 @@
                 </div>
             </div>
             <div class="-mx-4 flex flex-wrap">
-                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                    <div
-                        class="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
-                        <div class="bg-white mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
-                            <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/08/on_page_seo.png" alt="">
+
+              
+                <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+                    <div class="relative flex  flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden bg-white px-2 pt-10 pb-4 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto  sm:rounded-lg sm:px-4">
+                            <span
+                                class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[20]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <span
+                                    class="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
+
+                                    <img src="./optimization.png" alt="">
+                                </span>
+                                <div
+                                    class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+
+                                    <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
+                                        On-Page SEO
+                                    </h4>
+                                    <p>Ranking By SEO is the top SEO company in India specializing in on-page SEO
+                                        services including content and web structure optimization. We use a systematic
+                                        approach to optimize the different on-page elements of your website including
+                                        navigation experience, content optimization, and metadata optimization. We
+                                        conduct thorough keyword research and use the keywords in the content, meta
+                                        descriptions, webpage copies, and image alt texts to help your content rank well
+                                        on search engines. We have a comprehensive on-page SEO checklist that helps stay
+                                        on track while optimizing your website.</p>
+                                </div>
+                                <div class="pt-5 text-base font-semibold leading-7">
+                                    <p>
+                                        <a href="#"
+                                            class="text-sky-500 transition-all duration-300 group-hover:text-white">Read
+                                            More
+
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
-                            Refreshing Design
-                        </h4>
-                        <p class="text-body-color dark:text-dark-6">
-                            We dejoy working with discerning clients, people for whom
-                            qualuty, service, integrity & aesthetics.
-                        </p>
                     </div>
+
+
                 </div>
-                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                    <div
-                        class="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
-                        <div class=" mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
-                            <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/08/off_page_seo.png" alt="">
+                <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+                    <div class="relative flex  flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden bg-white px-2 pt-10 pb-4 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto  sm:rounded-lg sm:px-4">
+                            <span
+                                class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[20]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <span
+                                    class="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
+
+                                    <img src="./optimization.png" alt="">
+                                </span>
+                                <div
+                                    class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+
+                                    <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
+                                        On-Page SEO
+                                    </h4>
+                                    <p>Ranking By SEO is the top SEO company in India specializing in on-page SEO
+                                        services including content and web structure optimization. We use a systematic
+                                        approach to optimize the different on-page elements of your website including
+                                        navigation experience, content optimization, and metadata optimization. We
+                                        conduct thorough keyword research and use the keywords in the content, meta
+                                        descriptions, webpage copies, and image alt texts to help your content rank well
+                                        on search engines. We have a comprehensive on-page SEO checklist that helps stay
+                                        on track while optimizing your website.</p>
+                                </div>
+                                <div class="pt-5 text-base font-semibold leading-7">
+                                    <p>
+                                        <a href="#"
+                                            class="text-sky-500 transition-all duration-300 group-hover:text-white">Read
+                                            More
+
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
-                            Based on Tailwind CSS
-                        </h4>
-                        <p class="text-body-color dark:text-dark-6">
-                            We dejoy working with discerning clients, people for whom
-                            qualuty, service, integrity & aesthetics.
-                        </p>
                     </div>
+
+
                 </div>
-                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                    <div
-                        class="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
-                        <div class=" mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
-                            <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/08/technical_seo.png" alt="">
+                <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+                    <div class="relative flex  flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden bg-white px-2 pt-10 pb-4 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto  sm:rounded-lg sm:px-4">
+                            <span
+                                class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[20]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <span
+                                    class="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
+
+                                    <img src="./optimization.png" alt="">
+                                </span>
+                                <div
+                                    class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+
+                                    <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
+                                        On-Page SEO
+                                    </h4>
+                                    <p>Ranking By SEO is the top SEO company in India specializing in on-page SEO
+                                        services including content and web structure optimization. We use a systematic
+                                        approach to optimize the different on-page elements of your website including
+                                        navigation experience, content optimization, and metadata optimization. We
+                                        conduct thorough keyword research and use the keywords in the content, meta
+                                        descriptions, webpage copies, and image alt texts to help your content rank well
+                                        on search engines. We have a comprehensive on-page SEO checklist that helps stay
+                                        on track while optimizing your website.</p>
+                                </div>
+                                <div class="pt-5 text-base font-semibold leading-7">
+                                    <p>
+                                        <a href="#"
+                                            class="text-sky-500 transition-all duration-300 group-hover:text-white">Read
+                                            More
+
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
-                            100+ Components
-                        </h4>
-                        <p class="text-body-color dark:text-dark-6">
-                            We dejoy working with discerning clients, people for whom
-                            qualuty, service, integrity & aesthetics.
-                        </p>
                     </div>
+
+
                 </div>
-                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                    <div
-                        class="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
-                        <div class=" mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
-                            <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/08/ecommerce_seo.png" alt="">
+                <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+                    <div class="relative flex  flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden bg-white px-2 pt-10 pb-4 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto  sm:rounded-lg sm:px-4">
+                            <span
+                                class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[20]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <span
+                                    class="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
+
+                                    <img src="./optimization.png" alt="">
+                                </span>
+                                <div
+                                    class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+
+                                    <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
+                                        On-Page SEO
+                                    </h4>
+                                    <p>Ranking By SEO is the top SEO company in India specializing in on-page SEO
+                                        services including content and web structure optimization. We use a systematic
+                                        approach to optimize the different on-page elements of your website including
+                                        navigation experience, content optimization, and metadata optimization. We
+                                        conduct thorough keyword research and use the keywords in the content, meta
+                                        descriptions, webpage copies, and image alt texts to help your content rank well
+                                        on search engines. We have a comprehensive on-page SEO checklist that helps stay
+                                        on track while optimizing your website.</p>
+                                </div>
+                                <div class="pt-5 text-base font-semibold leading-7">
+                                    <p>
+                                        <a href="#"
+                                            class="text-sky-500 transition-all duration-300 group-hover:text-white">Read
+                                            More
+
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
-                            Speed Optimized
-                        </h4>
-                        <p class="text-body-color dark:text-dark-6">
-                            We dejoy working with discerning clients, people for whom
-                            qualuty, service, integrity & aesthetics.
-                        </p>
                     </div>
+
+
                 </div>
-                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                    <div
-                        class="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
-                        <div class="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
-                            <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/04/organic-seo-service.png"
-                                alt="">
+                <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+                    <div class="relative flex  flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden bg-white px-2 pt-10 pb-4 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto  sm:rounded-lg sm:px-4">
+                            <span
+                                class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[20]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <span
+                                    class="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
+
+                                    <img src="./optimization.png" alt="">
+                                </span>
+                                <div
+                                    class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+
+                                    <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
+                                        On-Page SEO
+                                    </h4>
+                                    <p>Ranking By SEO is the top SEO company in India specializing in on-page SEO
+                                        services including content and web structure optimization. We use a systematic
+                                        approach to optimize the different on-page elements of your website including
+                                        navigation experience, content optimization, and metadata optimization. We
+                                        conduct thorough keyword research and use the keywords in the content, meta
+                                        descriptions, webpage copies, and image alt texts to help your content rank well
+                                        on search engines. We have a comprehensive on-page SEO checklist that helps stay
+                                        on track while optimizing your website.</p>
+                                </div>
+                                <div class="pt-5 text-base font-semibold leading-7">
+                                    <p>
+                                        <a href="#"
+                                            class="text-sky-500 transition-all duration-300 group-hover:text-white">Read
+                                            More
+
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
-                            Fully Customizable
-                        </h4>
-                        <p class="text-body-color dark:text-dark-6">
-                            We dejoy working with discerning clients, people for whom
-                            qualuty, service, integrity & aesthetics.
-                        </p>
                     </div>
+
+
                 </div>
-                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                    <div
-                        class="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
-                        <div class=" mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
-                            <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/08/local_seo.png" alt="">
+                <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+                    <div class="relative flex  flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden bg-white px-2 pt-10 pb-4 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto  sm:rounded-lg sm:px-4">
+                            <span
+                                class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[20]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <span
+                                    class="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
+
+                                    <img src="./optimization.png" alt="">
+                                </span>
+                                <div
+                                    class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+
+                                    <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
+                                        On-Page SEO
+                                    </h4>
+                                    <p>Ranking By SEO is the top SEO company in India specializing in on-page SEO
+                                        services including content and web structure optimization. We use a systematic
+                                        approach to optimize the different on-page elements of your website including
+                                        navigation experience, content optimization, and metadata optimization. We
+                                        conduct thorough keyword research and use the keywords in the content, meta
+                                        descriptions, webpage copies, and image alt texts to help your content rank well
+                                        on search engines. We have a comprehensive on-page SEO checklist that helps stay
+                                        on track while optimizing your website.</p>
+                                </div>
+                                <div class="pt-5 text-base font-semibold leading-7">
+                                    <p>
+                                        <a href="#"
+                                            class="text-sky-500 transition-all duration-300 group-hover:text-white">Read
+                                            More
+
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-dark dark:text-white mb-[14px] text-2xl font-semibold">
-                            Regular Updates
-                        </h4>
-                        <p class="text-body-color dark:text-dark-6">
-                            We dejoy working with discerning clients, people for whom
-                            qualuty, service, integrity & aesthetics.
-                        </p>
                     </div>
+
+
                 </div>
+                
             </div>
         </div>
     </section>
@@ -514,75 +668,75 @@
                 <h2 class="text-xl font-semibold lg:text-2xl pb-8">Our Clients
 
                 </h2>
-                <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-6">
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/k12-print.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/atlantica-coffee.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/jaypee_hospital.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/Lotus.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/winzo.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center   lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/oppa888.png" alt="">
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-6 mt-12">
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6 mt-12">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/Tata-Cliq-logo.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/nobroker.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/airtel.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/religare.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/acko.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/99-games.png" alt="">
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-6 mt-12">
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6 mt-12">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/mpl-sports.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/goaloo.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/nse.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/dwights-outdoors.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center   lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/physics-wallah.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center   lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/jaypee_hospital.png" alt="">
                     </div>
                 </div>
@@ -891,27 +1045,27 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-6">
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/1-1.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/2-1.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/7.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center col-span-1  lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/4.png" alt="">
                     </div>
 
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center   lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/5.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center justify-center   lg:col-span-1">
                         <img src="https://www.rankingbyseo.com/wp-content/uploads/2023/09/3.png" alt="">
                     </div>
                 </div>
