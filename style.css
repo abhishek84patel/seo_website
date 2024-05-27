@@ -1,8 +1,8 @@
-html {
+html,body {
     overflow-x: hidden
 }
 
 .container {
-    width: 90% !important;
+    width: 98% !important;
     margin: auto !important;
 }
