@@ -1,5 +1,5 @@
 
-$(".responsive").slick({
+$(".respo nsive").slick({
   dots: true,
   infinite: true,
   speed: 300,
