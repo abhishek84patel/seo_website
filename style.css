@@ -6,7 +6,7 @@ h1,
 h2,
 h3,
 h4,
-h5>* {
+h5 > * {
   font-family: "Poppins", sans-serif;
 }
 
@@ -29,8 +29,11 @@ button.inline-block.rounded-lg.py-2.px-5.text-center.text-base.font-semibold.tra
 }
 
 .service {
-  background: #000000 url(https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/awards-BG.webp) no-repeat;
+  background: #000000
+  url(https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/footer-hq-bg.webp)
+    no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .top-slide .responsive1.slick-dotted.slick-slider {
@@ -65,7 +68,7 @@ button.inline-block.rounded-lg.py-2.px-5.text-center.text-base.font-semibold.tra
 .trns-text {
   display: block;
   font-size: 100px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   text-align: center;
   font-weight: bold;
   -webkit-text-fill-color: #3b82f600;
@@ -76,7 +79,8 @@ button.inline-block.rounded-lg.py-2.px-5.text-center.text-base.font-semibold.tra
 .last-box::after {
   position: absolute;
   content: "";
-  background: url(https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/industry-cta-bg.svg) no-repeat;
+  background: url(https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/industry-cta-bg.svg)
+    no-repeat;
   width: 98px;
   height: 114px;
   right: 20px;
@@ -87,18 +91,22 @@ button.inline-block.rounded-lg.py-2.px-5.text-center.text-base.font-semibold.tra
   margin: auto;
   height: 100px;
   object-fit: contain;
-
 }
-
-.comprehensive {
-
-  background: #000000 url(https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/awards-BG.webp) no-repeat;
-  background-position: center;
+.contact-us {
+  background: url(https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/footer-hq-bg.webp);
   background-size: cover;
-
+  background-position: center;
+  border-top: 6px solid #1163fb;
 }
-@media  (max-width:768px) {
-  .trns-text{
+.comprehensive {
+  
+  background: #000000 url(footer-hq-bg.jpg);
+  background-size: cover;
+  background-position: bottom;
+ 
+}
+@media (max-width: 768px) {
+  .trns-text {
     font-size: 50px;
     line-height: 1.2;
   }
