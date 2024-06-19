@@ -30,7 +30,7 @@ button.inline-block.rounded-lg.py-2.px-5.text-center.text-base.font-semibold.tra
 
 .service {
   background: #000000
-  url(https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/footer-hq-bg.webp)
+    url(https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/footer-hq-bg.webp)
     no-repeat;
   background-size: cover;
   background-position: center;
@@ -99,12 +99,41 @@ button.inline-block.rounded-lg.py-2.px-5.text-center.text-base.font-semibold.tra
   border-top: 6px solid #1163fb;
 }
 .comprehensive {
-  
-  background: #000000 url(footer-hq-bg.jpg);
+  background: #000000;
+  background: black
+    url(https://startup-tailwind.preview.uideck.com/images/shape.svg);
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
- 
+  background-position: 0px -77px;
 }
+
+/* header css */
+#full-width-megamenu {
+  display: none;
+}
+header {
+  transition: all 0.6s cubic-bezier(0.4, 0.25, 0, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.4, 0.25, 0, 1);
+}
+header.sticky {
+  position: fixed;
+  
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0.25, 0, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.4, 0.25, 0, 1);
+  z-index: 1000;
+}
+header.sticky a,
+header.sticky li > button {
+  color: #fff;
+}
+li:hover #full-width-megamenu {
+  display: block !important;
+}
+
 @media (max-width: 768px) {
   .trns-text {
     font-size: 50px;
