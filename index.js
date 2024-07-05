@@ -8,3 +8,7 @@ window.addEventListener("scroll", function () {
     header.classList.remove("sticky");
   }
 });
+document.querySelector('#menu-btn').addEventListener('click', function () {
+  const navbar = document.getElementById('megamenu-cta');
+  navbar.classList.toggle('hidden');
+});
